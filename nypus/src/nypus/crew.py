@@ -18,16 +18,16 @@ class Nypus():
 	# If you would like to add tools to your agents, you can learn more about it here:
 	# https://docs.crewai.com/concepts/agents#agent-tools
 	@agent
-	def researcher(self) -> Agent:
+	def trend_researcher(self) -> Agent:
 		return Agent(
-			config=self.agents_config['researcher'],
+			config=self.agents_config['trend_researcher'],
 			verbose=True
 		)
 
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def blogger(self) -> Agent:
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['blogger'],
 			verbose=True
 		)
 
@@ -41,10 +41,10 @@ class Nypus():
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def blog_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
+			config=self.tasks_config['blog_task'],
+			output_file='blog.md'
 		)
 
 	@crew

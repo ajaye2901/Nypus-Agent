@@ -2,7 +2,7 @@
 import sys
 import warnings
 
-from nypus.crew import Nypus
+from crew import Nypus
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
