@@ -29,3 +29,18 @@ seo_article_task:
     - Proper use of headings and subheadings.
     - Highlighted keywords and a meta description.
   agent: seo_writer
+
+commercial_script_task:
+  description: >
+    Research the target brand, product, or service and generate unique and engaging script ideas for commercial spots. 
+    Ensure the scripts:
+    - Align with the brand's tone and message.
+    - Appeal to the target audience.
+    - Include creative and memorable concepts.
+  expected_output: >
+    A markdown document containing:
+    - A brief introduction of the brand, product, or service.
+    - 3 to 5 script ideas with titles and short descriptions.
+    - Key elements of each script, including storyline, key messages, and a call to action.
+  agent: commercial_script_writer
+

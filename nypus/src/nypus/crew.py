@@ -37,6 +37,13 @@ class Nypus():
 			config=self.agents_config['seo_writer'],
 			verbose=True
 		)
+	
+	@agent
+	def commercial_script_writer(self) -> Agent:
+		return Agent(
+			config=self.agents_config['commercial_script_writer'],
+			verbose=True
+		)
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -59,6 +66,13 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['seo_article_task'],
 			output_file='article.md'
+		)
+	
+	@task
+	def commercial_script_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['commercial_script_task'],
+			output_file='spot_script.md'
 		)
 
 	@crew
