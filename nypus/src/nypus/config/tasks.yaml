@@ -1,16 +1,31 @@
 research_task:
   description: >
-    Conduct thorough research on the latest industry trends for {topic}. 
+    Conduct thorough research on the latest industry trends. 
     Ensure to gather the most relevant and up-to-date information, including emerging patterns and innovations, 
     considering the current year is 2024.
   expected_output: >
-     A list of 10 bullet points summarizing the most relevant and actionable insights about {topic}.
+     A list of 10 bullet points summarizing the most relevant and actionable insights about industry trends.
   agent: trend_researcher
 
 blog_task:
   description: >
-    Review the research findings and craft a well-structured, engaging blog post. 
+    Review the research findings and take an interresting topic and craft a well-structured, engaging blog post. 
     The post should be informative, easy to understand, and include key industry insights from the research.
   expected_output: >
     A fully written blog post formatted in markdown, capturing the essence of the research and presenting it in an engaging and coherent manner.
   agent: blogger
+
+seo_article_task:
+  description: >
+    Research and draft a high-quality, SEO-optimized article based on the blog.
+    Start by identifying relevant keywords, trending topics, and search terms.
+    Use the research to craft an engaging article that includes:
+    - Primary and secondary keywords
+    - A clear structure with headings and subheadings
+    - A compelling meta description
+  expected_output: >
+    An SEO-optimized article in markdown format:
+    - Includes a title, introduction, body, and conclusion.
+    - Proper use of headings and subheadings.
+    - Highlighted keywords and a meta description.
+  agent: seo_writer
