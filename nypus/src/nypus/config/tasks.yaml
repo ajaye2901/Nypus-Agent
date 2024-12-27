@@ -44,3 +44,20 @@ commercial_script_task:
     - Key elements of each script, including storyline, key messages, and a call to action.
   agent: commercial_script_writer
 
+hashtag_suggestion_task:
+  description: >
+    Research and identify the best hashtags for {campaign}. 
+    Provide:
+    - A brief description of the campaign objectives and its focus.
+    - A curated list of hashtags tailored to the campaign's goals and audience.
+    - Ensure hashtags are relevant, trending, and likely to boost visibility and engagement.
+  expected_output: >
+    A markdown document containing:
+    - Campaign Description: A concise summary of the campaign’s objectives and target focus.
+    - Suggested Hashtags: A list of 10 to 15 hashtags, categorized as:
+      - Trending hashtags
+      - Campaign-specific hashtags
+      - General high-engagement hashtags
+  agent: hashtag_specialist
+
+

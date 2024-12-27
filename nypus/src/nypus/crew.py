@@ -45,6 +45,15 @@ class Nypus():
 			verbose=True
 		)
 
+	@agent
+	def hashtag_specialist(self) -> Agent:
+		return Agent(
+			config=self.agents_config['hashtag_specialist'],
+			verbose=True
+		)
+	
+
+
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
 	# https://docs.crewai.com/concepts/tasks#overview-of-a-task
@@ -73,6 +82,13 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['commercial_script_task'],
 			output_file='spot_script.md'
+		)
+
+	@task
+	def hashtag_suggestion_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['hashtag_suggestion_task'],
+			output_file='hashtags.md'
 		)
 
 	@crew

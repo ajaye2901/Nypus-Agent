@@ -16,7 +16,8 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': ''
+        'topic': '',
+        'campaign' : 'New year offers'
     }
     Nypus().crew().kickoff(inputs=inputs)
 
