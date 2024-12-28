@@ -3,8 +3,6 @@ __pycache__/
 
 .venv/
 
-blog.md
-
 uv.lock
 
 article.md
@@ -22,3 +20,5 @@ vdo_scripts.md
 keyword-blog-topic.md
 
 vdo_ad_idea.md
+
+press_release.md

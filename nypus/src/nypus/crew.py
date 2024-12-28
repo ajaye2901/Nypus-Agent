@@ -80,6 +80,13 @@ class Nypus():
 			config=self.agents_config['video_ad_idea_creator'],
 			verbose=True
 		)
+	
+	@agent
+	def press_release_writer(self) -> Agent:
+		return Agent(
+			config=self.agents_config['press_release_writer'],
+			verbose=True
+		)
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -144,6 +151,13 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['video_ad_idea_task'],
 			output_file='vdo_ad_idea.md'
+		)
+	
+	@task
+	def press_release_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['press_release_task'],
+			output_file='press_release.md'
 		)
 
 	@crew

@@ -19,7 +19,8 @@ def run():
         'topic': '',
         'campaign' : 'New year offers of an restaurent',
         'product_features' : 'name - Boult bass earbuds, features - anc, bassboosted, long batterylife',
-        'tiktok/shorts theme' : 'software testers trolling software developers'
+        'tiktok/shorts theme' : 'software testers trolling software developers',
+        'product_data' : 'company name - Boult, product - earbud, product name - bass earbuds, features - anc, bassboosted, long batterylife'
     }
     Nypus().crew().kickoff(inputs=inputs)
 

@@ -124,6 +124,25 @@ video_ad_idea_task:
       - Target Platform: Recommended platform(s) for the concept.
   agent: video_ad_idea_creator
 
+press_release_task:
+  description: >
+    Write a professional and engaging press release for the launch of a new product. 
+    product details : {product_data}
+    Ensure the press release:
+    - Highlights the product's unique features and benefits.
+    - Clearly communicates the launch details (e.g., date, availability, pricing).
+    - Captures the brand voice and resonates with the target audience.
+    - Follows a standard press release format with headline, subhead, body, and boilerplate.
+  expected_output: >
+    A markdown document containing:
+    - Headline: A captivating title for the press release.
+    - Subhead: A concise summary that complements the headline.
+    - Body: A detailed description of the product launch, including key features, benefits, and quotes from stakeholders.
+    - Boilerplate: A brief description of the company or brand.
+    - Contact Information: Details for press inquiries.
+  agent: press_release_writer
+
+
 
 
 
