@@ -18,7 +18,8 @@ def run():
     inputs = {
         'topic': '',
         'campaign' : 'New year offers',
-        'product_features' : 'name - Boult bass earbuds, features - anc, bassboosted, long batterylife'
+        'product_features' : 'name - Boult bass earbuds, features - anc, bassboosted, long batterylife',
+        'theme' : 'software testers trolling software developers'
     }
     Nypus().crew().kickoff(inputs=inputs)
 

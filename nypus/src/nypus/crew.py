@@ -59,6 +59,13 @@ class Nypus():
 			config=self.agents_config['ecommerce_product_writer'],
 			verbose=True
 		)
+	
+	@agent
+	def short_form_scriptwriter(self) -> Agent:
+		return Agent(
+			config=self.agents_config['short_form_scriptwriter'],
+			verbose=True
+		)
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -102,6 +109,13 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['product_description_task'],
 			output_file='prod_desc.md'
+		)
+	
+	@task
+	def short_form_script_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['short_form_script_task'],
+			output_file='vdo_scripts.md'
 		)
 
 	@crew
