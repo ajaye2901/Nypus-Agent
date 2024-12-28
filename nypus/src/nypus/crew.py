@@ -66,6 +66,13 @@ class Nypus():
 			config=self.agents_config['short_form_scriptwriter'],
 			verbose=True
 		)
+	
+	@agent
+	def keyword_blog_topic_creator(self) -> Agent:
+		return Agent(
+			config=self.agents_config['keyword_blog_topic_creator'],
+			verbose=True
+		)
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -116,6 +123,13 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['short_form_script_task'],
 			output_file='vdo_scripts.md'
+		)
+	
+	@task
+	def keyword_blog_topic_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['keyword_blog_topic_task'],
+			output_file='keyword-blog-topic.md'
 		)
 
 	@crew

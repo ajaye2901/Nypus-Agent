@@ -91,6 +91,20 @@ short_form_script_task:
       - Call to Action: How to engage the audience further (e.g., follow, like, comment).
   agent: short_form_scriptwriter
 
+keyword_blog_topic_task:
+  description: >
+    Use the provided long-tail keywords to generate blog topics that are:
+    - Relevant to the keywords.
+    - Optimized for SEO.
+    - Engaging and suitable for the target audience.
+    Ensure the topics are specific and actionable, increasing their likelihood of ranking well and attracting readers.
+  expected_output: >
+    A markdown document containing:
+    - List of Long-Tail Keywords: The provided keywords.
+    - Blog Topics: A list of 5 to 10 blog topics based on the keywords, formatted as:
+      - Keyword: [The long-tail keyword].
+      - Topic: [The suggested blog topic].
+  agent: keyword_blog_topic_creator
 
 
 
