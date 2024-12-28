@@ -163,8 +163,20 @@ seo_audit_task:
     - Priority Recommendations: A ranked list of top actions to improve SEO.
   agent: seo_auditor
 
-
-
+testimonial_script_task:
+  description: >
+    Write engaging scripts for customer testimonials that showcase the value and impact of the product or service. Ensure the scripts:
+    - Highlight key benefits and unique selling points.
+    - Capture a natural and authentic customer voice.
+    - Include an introduction, a specific story or example, and a conclusion that reinforces trust and credibility.
+  expected_output: >
+    A markdown document containing:
+    - Customer Persona: A brief description of the type of customer giving the testimonial (e.g., their background, needs, and how they use the product).
+    - Testimonial Scripts: 3 distinct scripts, each including:
+      - Introduction: The customer introduces themselves and their context.
+      - Story: A specific challenge they faced and how the product or service helped solve it.
+      - Conclusion: A summary of their satisfaction and a recommendation to others.
+  agent: testimonial_scriptwriter
 
 
 

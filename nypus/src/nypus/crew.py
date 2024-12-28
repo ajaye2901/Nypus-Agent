@@ -92,6 +92,14 @@ class Nypus():
 	def seo_auditor(self) -> Agent:
 		return Agent(
 			config=self.agents_config['seo_auditor'],
+			tools=[SerperDevTool(), ScrapeWebsiteTool()],
+			verbose=True
+		)
+
+	@agent
+	def testimonial_scriptwriter(self) -> Agent:
+		return Agent(
+			config=self.agents_config['testimonial_scriptwriter'],
 			verbose=True
 		)
 
@@ -172,6 +180,13 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['seo_audit_task'],
 			output_file='seo_audit.md'
+		)
+	
+	@task
+	def testimonial_script_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['testimonial_script_task'],
+			output_file='testimonial.md'
 		)
 
 	@crew
