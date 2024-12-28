@@ -87,6 +87,13 @@ class Nypus():
 			config=self.agents_config['press_release_writer'],
 			verbose=True
 		)
+	
+	@agent
+	def seo_auditor(self) -> Agent:
+		return Agent(
+			config=self.agents_config['seo_auditor'],
+			verbose=True
+		)
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -158,6 +165,13 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['press_release_task'],
 			output_file='press_release.md'
+		)
+	
+	@task
+	def seo_audit_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['seo_audit_task'],
+			output_file='seo_audit.md'
 		)
 
 	@crew

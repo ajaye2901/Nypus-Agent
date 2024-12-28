@@ -142,6 +142,28 @@ press_release_task:
     - Contact Information: Details for press inquiries.
   agent: press_release_writer
 
+seo_audit_task:
+  description: >
+    Perform a detailed SEO audit for the given website: {website_url}.
+    Focus on the following aspects:
+    - Technical SEO: Check site speed, mobile-friendliness, URL structure, and indexability.
+    - On-Page SEO: Review meta tags, headings, keyword usage, and content optimization.
+    - Off-Page SEO: Assess backlink quality and authority.
+    - User Experience: Identify issues affecting navigation and usability.
+    Provide actionable recommendations for each area to improve SEO performance.
+  expected_output: >
+    A markdown document containing:
+    - Website URL: {website_url}
+    - Audit Summary: A high-level overview of the website's current SEO status.
+    - Detailed Findings:
+      - Technical SEO Issues: List problems and suggested fixes.
+      - On-Page SEO Issues: List problems and suggested fixes.
+      - Off-Page SEO Analysis: Key observations and improvement strategies.
+      - User Experience Insights: Navigation and usability recommendations.
+    - Priority Recommendations: A ranked list of top actions to improve SEO.
+  agent: seo_auditor
+
+
 
 
 
