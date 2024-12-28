@@ -77,19 +77,20 @@ product_description_task:
 
 short_form_script_task:
   description: >
-    Write creative and engaging scripts for TikTok/YouTube Shorts based on {theme}.
+    Write creative and engaging scripts for TikTok/YouTube Shorts based on the given theme: {tiktok/shorts theme}.
     Ensure the scripts:
     - Align with the platform's style and audience expectations.
     - Include a hook, engaging main content, and a clear call to action.
     - Are concise and fit within the time constraints of short-form video content.
   expected_output: >
     A markdown document containing:
-    - Theme: {theme}.
-    - Script: A step-by-step breakdown of the short-form video.provide 2 or 3 scripts:
+    - Theme: {tiktok/shorts theme}.
+    - Scripts: Provide 2 or 3 complete scripts for the short-form video, each with:
       - Hook: The opening line or action to grab attention.
       - Body: The main content or narrative.
       - Call to Action: How to engage the audience further (e.g., follow, like, comment).
   agent: short_form_scriptwriter
+
 
 
 
