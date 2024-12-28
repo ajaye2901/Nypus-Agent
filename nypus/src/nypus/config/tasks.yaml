@@ -106,5 +106,24 @@ keyword_blog_topic_task:
       - Topic: [The suggested blog topic].
   agent: keyword_blog_topic_creator
 
+video_ad_idea_task:
+  description: >
+    Develop a set of creative ideas for video advertisements based on the given campaign objectives and target audience. 
+    campaign:{campaign}
+    Ensure the ideas:
+    - Are tailored to the intended platform (e.g., TikTok, YouTube, Instagram).
+    - Highlight key messaging in a visually compelling and emotionally engaging manner.
+    - Include suggestions for tone, style, and narrative structure.
+  expected_output: >
+    A markdown document containing:
+    - Campaign Objectives: A brief description of the campaign's goals and target audience.
+    - Video Ad Ideas: A list of 5 to 7 advertisement concepts, each with:
+      - Concept Title: A catchy name or title for the idea.
+      - Concept Overview: A detailed explanation of the video's narrative and style.
+      - Key Elements: Suggestions for visuals, tone, and messaging.
+      - Target Platform: Recommended platform(s) for the concept.
+  agent: video_ad_idea_creator
+
+
 
 

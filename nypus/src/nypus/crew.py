@@ -73,6 +73,13 @@ class Nypus():
 			config=self.agents_config['keyword_blog_topic_creator'],
 			verbose=True
 		)
+	
+	@agent
+	def video_ad_idea_creator(self) -> Agent:
+		return Agent(
+			config=self.agents_config['video_ad_idea_creator'],
+			verbose=True
+		)
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -130,6 +137,13 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['keyword_blog_topic_task'],
 			output_file='keyword-blog-topic.md'
+		)
+	
+	@task
+	def video_ad_idea_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['video_ad_idea_task'],
+			output_file='vdo_ad_idea.md'
 		)
 
 	@crew

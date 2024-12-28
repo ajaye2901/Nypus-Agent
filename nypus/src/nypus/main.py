@@ -17,7 +17,7 @@ def run():
     """
     inputs = {
         'topic': '',
-        'campaign' : 'New year offers',
+        'campaign' : 'New year offers of an restaurent',
         'product_features' : 'name - Boult bass earbuds, features - anc, bassboosted, long batterylife',
         'tiktok/shorts theme' : 'software testers trolling software developers'
     }
