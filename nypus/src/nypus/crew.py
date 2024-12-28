@@ -1,5 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool
 
 # If you want to run a snippet of code before or after the crew starts, 
 # you can use the @before_kickoff and @after_kickoff decorators
@@ -52,7 +53,20 @@ class Nypus():
 			verbose=True
 		)
 	
+	@agent
+	def product_researcher(self) -> Agent:
+		return Agent(
+			config=self.agents_config['product_researcher'],
+			tools=[SerperDevTool(), ScrapeWebsiteTool()],
+			verbose=True
+		)
 
+	@agent
+	def product_description_writer(self) -> Agent:
+		return Agent(
+			config=self.agents_config['product_description_writer'],
+			verbose=True
+		)
 
 	# To learn more about structured task outputs, 
 	# task dependencies, and task callbacks, check out the documentation:
@@ -89,6 +103,19 @@ class Nypus():
 		return Task(
 			config=self.tasks_config['hashtag_suggestion_task'],
 			output_file='hashtags.md'
+		)
+	
+	@task
+	def product_research_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['product_research_task'],
+		)
+
+	@task
+	def product_description_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['product_description_task'],
+			output_file='prod_desc.md'
 		)
 
 	@crew

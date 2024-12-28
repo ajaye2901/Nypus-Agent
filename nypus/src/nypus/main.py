@@ -17,7 +17,8 @@ def run():
     """
     inputs = {
         'topic': '',
-        'campaign' : 'New year offers'
+        'campaign' : 'New year offers',
+        'website_domain': 'www.steelforceco.com'
     }
     Nypus().crew().kickoff(inputs=inputs)
 

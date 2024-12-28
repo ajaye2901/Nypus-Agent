@@ -60,4 +60,33 @@ hashtag_suggestion_task:
       - General high-engagement hashtags
   agent: hashtag_specialist
 
+product_research_task:
+  description: >
+    Research and gather detailed information about all the products listed on the e-commerce website: {website_domain}.
+    Collect data such as product features, specifications, benefits, pricing, and any unique selling points.
+    Organize the data into a clear and structured format for further use.
+  expected_output: >
+    A structured list of products with detailed information, including:
+    - Product Name
+    - Key Features
+    - Specifications
+    - Benefits
+    - Pricing
+  agent: product_researcher
+
+product_description_task:
+  description: >
+    Use the research data provided to create SEO-optimized and engaging product descriptions for each product.
+    Ensure the descriptions include:
+    - Product Name
+    - Key Features and Specifications
+    - Benefits and Unique Selling Points
+    - A tone consistent with the e-commerce website's branding
+  expected_output: >
+    A markdown file with SEO-optimized product descriptions, formatted as:
+    - Product Name: Title
+    - Features: Bullet points
+    - Description: Paragraph highlighting benefits and unique points
+  agent: product_description_writer
+
 
