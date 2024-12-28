@@ -53,40 +53,26 @@ hashtag_suggestion_task:
     - Ensure hashtags are relevant, trending, and likely to boost visibility and engagement.
   expected_output: >
     A markdown document containing:
-    - Campaign Description: A concise summary of the campaign’s objectives and target focus.
+    - Campaign Description: A concise summary of the campaign's objectives and target focus.
     - Suggested Hashtags: A list of 10 to 15 hashtags, categorized as:
       - Trending hashtags
       - Campaign-specific hashtags
       - General high-engagement hashtags
   agent: hashtag_specialist
 
-product_research_task:
-  description: >
-    Research and gather detailed information about all the products listed on the e-commerce website: {website_domain}.
-    Collect data such as product features, specifications, benefits, pricing, and any unique selling points.
-    Organize the data into a clear and structured format for further use.
-  expected_output: >
-    A structured list of products with detailed information, including:
-    - Product Name
-    - Key Features
-    - Specifications
-    - Benefits
-    - Pricing
-  agent: product_researcher
-
 product_description_task:
   description: >
-    Use the research data provided to create SEO-optimized and engaging product descriptions for each product.
-    Ensure the descriptions include:
-    - Product Name
-    - Key Features and Specifications
-    - Benefits and Unique Selling Points
-    - A tone consistent with the e-commerce website's branding
+    Write engaging and SEO-optimized product descriptions for an e-commerce website. 
+    Ensure that each description includes:
+    - Key features and specifications.
+    - Benefits and unique selling points.
+    - A tone consistent with the brand's voice.
   expected_output: >
-    A markdown file with SEO-optimized product descriptions, formatted as:
-    - Product Name: Title
-    - Features: Bullet points
-    - Description: Paragraph highlighting benefits and unique points
-  agent: product_description_writer
+    A markdown document for the product {product_features} 
+    - Product Name
+    - Key Features (Bullet points)
+    - Benefits and Description (Detailed paragraph)
+    - Unique Selling Points (Short summary)
+  agent: ecommerce_product_writer
 
 

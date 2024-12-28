@@ -18,7 +18,7 @@ def run():
     inputs = {
         'topic': '',
         'campaign' : 'New year offers',
-        'website_domain': 'www.steelforceco.com'
+        'product_features' : 'name - Boult bass earbuds, features - anc, bassboosted, long batterylife'
     }
     Nypus().crew().kickoff(inputs=inputs)
 

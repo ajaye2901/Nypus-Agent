@@ -54,17 +54,9 @@ class Nypus():
 		)
 	
 	@agent
-	def product_researcher(self) -> Agent:
+	def ecommerce_product_writer(self) -> Agent:
 		return Agent(
-			config=self.agents_config['product_researcher'],
-			tools=[SerperDevTool(), ScrapeWebsiteTool()],
-			verbose=True
-		)
-
-	@agent
-	def product_description_writer(self) -> Agent:
-		return Agent(
-			config=self.agents_config['product_description_writer'],
+			config=self.agents_config['ecommerce_product_writer'],
 			verbose=True
 		)
 
@@ -105,12 +97,6 @@ class Nypus():
 			output_file='hashtags.md'
 		)
 	
-	@task
-	def product_research_task(self) -> Task:
-		return Task(
-			config=self.tasks_config['product_research_task'],
-		)
-
 	@task
 	def product_description_task(self) -> Task:
 		return Task(
